@@ -63,5 +63,8 @@ function allWagesFor(object) {
 }
 
 function calculatePayroll(array) {
-
+    let sum = array.reduce((preValue, curValue) => {
+        return preValue + allWagesFor(curValue)
+    }, 0)
+    return parseInt(sum)
 }
